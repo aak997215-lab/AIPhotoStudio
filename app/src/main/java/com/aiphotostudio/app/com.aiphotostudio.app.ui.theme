@@ -1,0 +1,33 @@
+package com.aiphotostudio.app.ui.theme
+
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+
+object Palette {
+    val Black = Color(0xFF07060C)
+    val Surface = Color(0xFF13111C)
+    val Surface2 = Color(0xFF1C1929)
+    val Line = Color(0xFF2A2640)
+    val Purple = Color(0xFF8B5CF6)
+    val PurpleDeep = Color(0xFF5B21B6)
+    val PurpleSoft = Color(0xFFC4B5FD)
+    val Gold = Color(0xFFFBBF24)
+    val Text = Color(0xFFF4F2FA)
+    val Muted = Color(0xFF9A96AD)
+}
+
+@Composable
+fun StudioTheme(content: @Composable () -> Unit) {
+    MaterialTheme(
+        colorScheme = darkColorScheme(
+            primary = Palette.Purple,
+            background = Palette.Black,
+            surface = Palette.Surface,
+            onBackground = Palette.Text,
+            onSurface = Palette.Text
+        ),
+        content = content
+    )
+}
